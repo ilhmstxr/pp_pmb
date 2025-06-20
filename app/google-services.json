@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "700952357200",
+    "project_id": "peduli-pangan-v1",
+    "storage_bucket": "peduli-pangan-v1.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:700952357200:android:ad2c7fc17a70d964c6e455",
+        "android_client_info": {
+          "package_name": "com.example.peduli_pangan_versipemmob"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC5KZIBxr2FnIJ6GsmLbU_Pl9G7lgzlBBA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
