@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="250dp"
+    android:layout_height="wrap_content"
+    android:layout_marginEnd="16dp"
+    app:cardCornerRadius="16dp"
+    app:cardElevation="4dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/iv_restaurant_image"
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:scaleType="centerCrop"
+            tools:src="@tools:sample/backgrounds/scenic" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="12dp">
+
+            <TextView
+                android:id="@+id/tv_restaurant_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Mie Gacoan - Merr"
+                android:textColor="@android:color/black"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_restaurant_hours"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="9:00am - 11:00pm"
+                android:textSize="12sp" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+                <!-- Bintang Rating -->
+                <ImageView android:layout_width="16dp" android:layout_height="16dp" app:srcCompat="@android:drawable/btn_star_big_on" />
+                <ImageView android:layout_width="16dp" android:layout_height="16dp" app:srcCompat="@android:drawable/btn_star_big_on" />
+                <ImageView android:layout_width="16dp" android:layout_height="16dp" app:srcCompat="@android:drawable/btn_star_big_on" />
+                <ImageView android:layout_width="16dp" android:layout_height="16dp" app:srcCompat="@android:drawable/btn_star_big_on" />
+                <ImageView android:layout_width="16dp" android:layout_height="16dp" app:srcCompat="@android:drawable/btn_star_big_off" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:text="+6765 reviews and ratiings"
+                    android:textSize="12sp" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</com.google.android.material.card.MaterialCardView>
