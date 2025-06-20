@@ -15,14 +15,19 @@ import com.example.peduli_pangan_versipemmob.adapter.FoodAdapter
 import com.example.peduli_pangan_versipemmob.adapter.RestaurantAdapter
 import com.example.peduli_pangan_versipemmob.databinding.FragmentHomeBinding
 import com.example.peduli_pangan_versipemmob.model.Food
+import com.example.peduli_pangan_versipemmob.repository.FirebaseRepository
 import com.example.peduli_pangan_versipemmob.viewmodel.HomeViewModel
+import com.example.peduli_pangan_versipemmob.viewmodel.ViewModelFactory
 
 class HomeFragment : Fragment() {
 
     private var _binding: FragmentHomeBinding? = null
     private val binding get() = _binding!!
 
-    private val viewModel: HomeViewModel by viewModels()
+    // REVISI: Menginisialisasi viewModel menggunakan ViewModelFactory
+    private val viewModel: HomeViewModel by viewModels {
+        ViewModelFactory(FirebaseRepository())
+    }
 
     private lateinit var categoryAdapter: CategoryAdapter
     private lateinit var restaurantAdapter: RestaurantAdapter

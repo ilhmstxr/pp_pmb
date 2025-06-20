@@ -2,7 +2,9 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <!-- REVISI: Tambahkan android:name untuk mendaftarkan Application class -->
     <application
+        android:name=".PeduliPanganApp"
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
@@ -12,9 +14,11 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Peduli_pangan_versipemmob"
         tools:targetApi="31">
+
         <activity
             android:name=".ui.auth.RegisterActivity"
             android:exported="false" />
+
         <activity
             android:name=".HomepageActivity2"
             android:exported="false" />

@@ -8,9 +8,9 @@ import com.example.peduli_pangan_versipemmob.model.User
 import com.example.peduli_pangan_versipemmob.model.UserRole
 import com.example.peduli_pangan_versipemmob.repository.FirebaseRepository
 import kotlinx.coroutines.launch
-import javax.inject.Inject
 
-class AuthViewModel @Inject constructor(
+// Anotasi @Inject dan import javax.inject.Inject telah dihapus.
+class AuthViewModel(
     private val repository: FirebaseRepository
 ) : ViewModel() {
 
@@ -49,7 +49,7 @@ class AuthViewModel @Inject constructor(
         phoneNumber: String,
         address: String
     ) {
-        if (username.isBlank() || email.isBlank() || password.isBlank() || fullName.isBlank()) {
+        if (username.isBlank() || email.isBlank() || password.isBlank()) {
             _authState.value = AuthState.Error("Please fill all required fields")
             return
         }

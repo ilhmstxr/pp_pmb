@@ -9,9 +9,9 @@ import com.example.peduli_pangan_versipemmob.model.Food
 import com.example.peduli_pangan_versipemmob.model.Restaurant
 import com.example.peduli_pangan_versipemmob.repository.FirebaseRepository
 import kotlinx.coroutines.launch
-import javax.inject.Inject
 
-class HomeViewModel @Inject constructor(
+// Anotasi @Inject dan import javax.inject.Inject telah dihapus.
+class HomeViewModel(
     private val repository: FirebaseRepository
 ) : ViewModel() {
 
