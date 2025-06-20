@@ -15,4 +15,8 @@
     <style name="Theme.Peduli_pangan_versipemmob.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
 
     <style name="Theme.Peduli_pangan_versipemmob.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+    <style name="RatingBar" parent="Theme.AppCompat">
+        <item name="colorControlNormal">@color/gray_600</item>
+        <item name="colorControlActivated">@color/yellow</item>
+    </style>
 </resources>

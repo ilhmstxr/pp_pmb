@@ -28,12 +28,12 @@ class LoginActivity : AppCompatActivity() {
         viewModel.authState.observe(this) { state ->
             when (state) {
                 is AuthViewModel.AuthState.Loading -> {
-                    binding.progressBar.isVisible = true
-                    binding.btnLogin.isEnabled = false
+                    binding.progressBar?.isVisible = true
+                    binding.btnLogin?.isEnabled = false
                 }
                 is AuthViewModel.AuthState.Success -> {
-                    binding.progressBar.isVisible = false
-                    binding.btnLogin.isEnabled = true
+                    binding.progressBar?.isVisible = false
+                    binding.btnLogin?.isEnabled = true
 
                     if (state.message == "Login successful") {
                         startActivity(Intent(this, MainActivity::class.java))
@@ -43,8 +43,8 @@ class LoginActivity : AppCompatActivity() {
                     }
                 }
                 is AuthViewModel.AuthState.Error -> {
-                    binding.progressBar.isVisible = false
-                    binding.btnLogin.isEnabled = true
+                    binding.progressBar?.isVisible = false
+                    binding.btnLogin?.isEnabled = true
                     Toast.makeText(this, state.message, Toast.LENGTH_LONG).show()
                 }
             }
@@ -59,14 +59,14 @@ class LoginActivity : AppCompatActivity() {
     }
 
     private fun setupClickListeners() {
-        binding.btnLogin.setOnClickListener {
-            val email = binding.etEmail.text.toString().trim()
-            val password = binding.etPassword.text.toString().trim()
+        binding.btnLogin?.setOnClickListener {
+            val email = binding.etEmail?.text.toString().trim()
+            val password = binding.etPassword?.text.toString().trim()
 
             viewModel.login(email, password)
         }
 
-        binding.tvRegister.setOnClickListener {
+        binding.tvRegister?.setOnClickListener {
             startActivity(Intent(this, RegisterActivity::class.java))
         }
     }

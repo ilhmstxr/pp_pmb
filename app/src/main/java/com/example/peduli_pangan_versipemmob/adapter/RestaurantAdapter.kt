@@ -1,4 +1,14 @@
-package com.example.peduli_pangan_versipemmob.adapter 
+package com.example.peduli_pangan_versipemmob.adapter
+
+import android.view.LayoutInflater
+import android.view.ViewGroup
+import androidx.core.view.isVisible
+import androidx.recyclerview.widget.DiffUtil
+import androidx.recyclerview.widget.ListAdapter
+import androidx.recyclerview.widget.RecyclerView
+import com.bumptech.glide.Glide
+import com.example.peduli_pangan_versipemmob.databinding.ItemRestaurantBinding
+import com.example.peduli_pangan_versipemmob.model.Restaurant
 
 class RestaurantAdapter(
     private val onRestaurantClick: (Restaurant) -> Unit
